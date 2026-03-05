@@ -4,6 +4,9 @@ import com.eva.taskmanager.model.Task;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /** Qué debes entender (sin memorizar):
  Es una clase Java
  Tiene un método
@@ -12,13 +15,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    @GetMapping("/task")
-    public Task getTask() {
-        return new Task("Estudiar Spring Boot" , false);
-    }
-    @GetMapping("/task2")
-    public Task getAnotherTask() {
-        return new Task("Hacer ejercicio", true);
+    // Lista de tareas
+    @GetMapping("/tasks")
+    public List<Task> getTasks() {
+
+        List<Task> tasks = new ArrayList<>();
+
+        tasks.add(new Task("Estudiar Spring Boot", false));
+        tasks.add(new Task("Hacer ejercicio", true));
+        tasks.add(new Task("Estudiar Microservicios", true));
+
+        return tasks;
+
     }
 
 }
