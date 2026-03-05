@@ -16,5 +16,9 @@ public class HelloController {
     public Task getTask() {
         return new Task("Estudiar Spring Boot" , false);
     }
+    @GetMapping("/task2")
+    public Task getAnotherTask() {
+        return new Task("Hacer ejercicio", true);
+    }
 
 }
