@@ -1,5 +1,6 @@
 package com.eva.taskmanager.controller;
 
+import com.eva.taskmanager.model.Task;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,9 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    @GetMapping("/hello")
-    public String hello() {
-        return "Hola desde Spring Boot";
+    @GetMapping("/task")
+    public Task getTask() {
+        return new Task("Estudiar Spring Boot" , false);
     }
 
 }
