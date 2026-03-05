@@ -21,9 +21,9 @@ public class HelloController {
 
         List<Task> tasks = new ArrayList<>();
 
-        tasks.add(new Task("Estudiar Spring Boot", false));
-        tasks.add(new Task("Hacer ejercicio", true));
-        tasks.add(new Task("Estudiar Microservicios", true));
+        tasks.add(new Task(1,"Estudiar Spring Boot", false));
+        tasks.add(new Task(2,"Hacer ejercicio", true));
+        tasks.add(new Task(3,"Estudiar Microservicios", true));
 
         return tasks;
 

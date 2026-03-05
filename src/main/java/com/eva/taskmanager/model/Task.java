@@ -2,11 +2,14 @@ package com.eva.taskmanager.model;
 
 public class Task {
     /* Atributos privados */
+    private int id;
     private String title;
     private boolean completed;
 
+
     /* Constructor */
-    public Task(String title, boolean completed) {
+    public Task(int id, String title, boolean completed) {
+        this.id = id;
         this.title = title;
         this.completed = completed;
     }
@@ -19,4 +22,7 @@ public class Task {
         return completed;
     }
 
+    public int getId() {
+        return id;
+    }
 }
